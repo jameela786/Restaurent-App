@@ -1,0 +1,264 @@
+.HeaderNavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 14vh;
+  background-color: aliceblue;
+}
+
+.HomeIconHeader {
+  font-family: Roboto;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.cartIcon {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.myordersHeader {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.ItemBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid rgb(248, 244, 244);
+  margin: 0px;
+  padding: 10px 0; /* Add some padding */
+  overflow-x: auto;
+  scrollbar-width: thin; /* Thin scrollbar for better appearance */
+  scrollbar-color: #ccc transparent; /* Customize scrollbar colors */
+  white-space: nowrap; /* Prevent line breaks */
+  width: 100%; /* Ensure it takes full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.EachItemDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemBtn {
+  border: 0px solid;
+  width: 200px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+
+.BtnUnderline {
+  width: 200px;
+  border: 1px solid;
+}
+
+.activeBtnStyle {
+  color: orange;
+  border-bottom: 2px solid orange;
+  /* padding: 5px;
+  margin: 0px; */
+}
+
+.InactiveBtnStyle {
+  color: black;
+}
+
+.cart-count {
+  border: 0px solid;
+  width: 10px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  right: 8px;
+  top: 5%;
+  position: absolute;
+
+  padding: 0 6px;
+}
+
+.CardHolderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
+}
+
+.cardContainer {
+  border: 1px solid grey;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.VegNonVegIcon {
+  /* border: 1px solid red; */
+  /* padding: 5px; */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleInside {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.vegIcon {
+  background-color: green; /* Green for Veg */
+}
+
+.vegIconBorder {
+  border: 2px solid green;
+}
+
+.nonVegIcon {
+  background-color: red; /* Red for Non-Veg */
+}
+
+.nonVegIconBorder {
+  border: 2px solid red;
+}
+/* .circleInside {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+} */
+
+.displayedText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.cardDishPrice {
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.dishNotavailable {
+  color: orange;
+  font-size: 12px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.DishImg {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.ImgCaloryDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.caloriesDish {
+  color: orange;
+  font-weight: bold;
+}
+
+.itemBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: green;
+  color: #ffffff;
+  width: 130px;
+  height: 35px;
+  border-radius: 15px;
+}
+
+.decrementBtn {
+  border: 0px solid;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.incrementBtn {
+  border: 0px solid;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.itemCartCount {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.customizationStyle {
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(124, 44, 139);
+}
+@media (max-width: 576px) {
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardContainer {
+    border: 1px solid grey;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px;
+  }
+  .ImgCaloryDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+  }
+}
