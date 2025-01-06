@@ -139,20 +139,19 @@ class Home extends Component {
             <li className="cardContainer" key={eachDishDisplay.dishId}>
               <div className="textContainer">
                 <div
-                  className="VegNonVegIcon"
                   className={
                     eachDishDisplay.dishType === 2
-                      ? 'VegNonVegIcon vegIconBorder' // Green for vegetarian
-                      : 'VegNonVegIcon nonVegIconBorder' // Red for non-vegetarian
+                      ? 'VegNonVegIcon vegIconBorder'
+                      : 'VegNonVegIcon nonVegIconBorder'
                   }
                 >
                   <div
                     className={
                       eachDishDisplay.dishType === 2
-                        ? 'circleInside vegIcon' // Green for vegetarian
-                        : 'circleInside nonVegIcon' // Red for non-vegetarian
+                        ? 'circleInside vegIcon'
+                        : 'circleInside nonVegIcon'
                     }
-                  ></div>
+                  />
                 </div>
                 <div className="displayedText">
                   <p className="cardTitle">{eachDishDisplay.dishName}</p>
