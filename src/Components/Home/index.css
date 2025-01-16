@@ -73,25 +73,6 @@
   color: black;
 }
 
-.cart-count {
-  border: 0px solid;
-  width: 10px;
-  background-color: rgb(255, 0, 0);
-  border-radius: 50%;
-  min-width: 20px;
-  height: 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  right: 8px;
-  top: 5%;
-  position: absolute;
-
-  padding: 0 6px;
-}
-
 .CardHolderContainer {
   display: flex;
   flex-direction: column;
@@ -218,6 +199,14 @@
   outline: none;
   color: #ffffff;
   font-size: 25px;
+}
+
+.onAddtocartBtn {
+  border: 0px solid;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
 }
 
 .incrementBtn {
