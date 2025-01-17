@@ -45,7 +45,7 @@ const Header = props => {
               </li>
 
               <li className="nav-menu-item">
-                <Link to="/cart" className="nav-link-cart">
+                <Link to="/cart" className="nav-link-cart" data-testid="cart">
                   <AiOutlineShoppingCart size={28} />
                   {renderCartItemsCount()}
                 </Link>

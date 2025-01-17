@@ -1,8 +1,4 @@
-import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
-import {AiFillCloseCircle} from 'react-icons/ai'
-
 import CartContext from '../../context/CartContext'
-
 import './index.css'
 
 const CartItem = props => (
@@ -13,31 +9,21 @@ const CartItem = props => (
         decrementCartItemQuantity,
         incrementCartItemQuantity,
       } = value
+
       const {cartItemDetails} = props
-      console.log('cartItemDetails==', cartItemDetails)
-      const {
-        dishId,
-
-        quantity,
-        dishPrice,
-
-        dishImage,
-
-        dishName,
-      } = cartItemDetails
+      const {dishId, quantity, dishPrice, dishImage, dishName} = cartItemDetails
 
       const onRemoveCartItem = () => {
         removeCartItem(dishId)
-        console.log('remove cart item:')
-      }
-      const ondecrementItem = () => {
-        decrementCartItemQuantity(dishId)
-      }
-      const onincrementItem = () => {
-        incrementCartItemQuantity(dishId)
       }
 
-      // TODO: Update the functionality to increment and decrement quantity of the cart item
+      const onDecrementItem = () => {
+        decrementCartItemQuantity(dishId)
+      }
+
+      const onIncrementItem = () => {
+        incrementCartItemQuantity(dishId)
+      }
 
       return (
         <li className="cart-item">
@@ -50,39 +36,31 @@ const CartItem = props => (
               <button
                 type="button"
                 className="quantity-controller-button"
-                data-testdishId="minus"
-                onClick={ondecrementItem}
+                onClick={onDecrementItem}
+                aria-label="-"
               >
-                <BsDashSquare color="#52606D" size={12} />
+                -
               </button>
               <p className="cart-quantity">{quantity}</p>
               <button
                 type="button"
                 className="quantity-controller-button"
-                data-testdishId="plus"
-                onClick={onincrementItem}
+                onClick={onIncrementItem}
+                aria-label="+"
               >
-                <BsPlusSquare color="#52606D" size={12} />
+                +
               </button>
             </div>
-            <div className="total-price-remove-container">
-              <p className="cart-total-price">Rs {dishPrice * quantity}/-</p>
-              <button
-                className="remove-button"
-                type="button"
-                onClick={onRemoveCartItem}
-              >
-                Remove
-              </button>
+            <div className="total-price-container">
+              <p className="cart-total-price">SAR {dishPrice * quantity}</p>
             </div>
           </div>
           <button
             className="delete-button"
             type="button"
-            data-testdishId="remove"
             onClick={onRemoveCartItem}
           >
-            <AiFillCloseCircle color="#616E7C" size={20} />
+            Remove
           </button>
         </li>
       )

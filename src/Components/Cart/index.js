@@ -34,6 +34,7 @@ const Cart = () => (
                 <h1 className="cart-heading">My Cart</h1>
                 <div className="removeallBtn_container">
                   <button
+                    type="button"
                     className="removeall_btn"
                     onClick={onClickremoveallItems}
                   >

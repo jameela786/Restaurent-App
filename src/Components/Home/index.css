@@ -203,10 +203,14 @@
 
 .onAddtocartBtn {
   border: 0px solid;
-  background: transparent;
+
   cursor: pointer;
   outline: none;
+  background-color: green;
   color: #ffffff;
+  width: 130px;
+  height: 35px;
+  border-radius: 15px;
 }
 
 .incrementBtn {

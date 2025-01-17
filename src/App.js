@@ -50,15 +50,12 @@ class App extends Component {
   decrementCartItemQuantity = id => {
     this.setState(prevState => {
       const itemToUpdate = prevState.cartList.find(item => item.dishId === id)
-
-      // If item exists and quantity > 1, decrement quantity
       if (itemToUpdate && itemToUpdate.quantity > 1) {
         const updatedItem = {
           ...itemToUpdate,
           quantity: itemToUpdate.quantity - 1,
         }
 
-        // Map over cartList to update the specific item
         const updatedCartList = prevState.cartList.map(item =>
           item.dishId === id ? updatedItem : item,
         )
@@ -66,7 +63,6 @@ class App extends Component {
         return {cartList: updatedCartList}
       }
 
-      // If quantity is 1, remove the item by filtering it out
       const updatedCartList = prevState.cartList.filter(
         item => item.dishId !== id,
       )
@@ -77,15 +73,12 @@ class App extends Component {
   incrementCartItemQuantity = id => {
     this.setState(prevState => {
       const itemToUpdate = prevState.cartList.find(item => item.dishId === id)
-
-      // If item exists, increment quantity
       if (itemToUpdate) {
         const updatedItem = {
           ...itemToUpdate,
           quantity: itemToUpdate.quantity + 1,
         }
 
-        // Map over cartList to update the specific item
         const updatedCartList = prevState.cartList.map(item =>
           item.dishId === id ? updatedItem : item,
         )
@@ -93,7 +86,7 @@ class App extends Component {
         return {cartList: updatedCartList}
       }
 
-      return null // Return null if no changes are needed
+      return null
     })
   }
 
